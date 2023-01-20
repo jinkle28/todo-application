@@ -18,3 +18,8 @@ export const deleteTodoList = (id) => {
         .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
         .then(({ data }) => data);
 }
+export const updateTodoList = (id,data) => {
+    return axios
+    .put(`https://jsonplaceholder.typicode.com/todos/${id}`,{data})
+    .then(({ data }) => data);
+}
